@@ -1,0 +1,77 @@
+@import "variables";
+
+
+
+//reset
+@mixin reset{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//propiedas flex
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//propiedades flex de containers
+@mixin flexContainers{
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+//margin y center para titulos y subtitulos
+@mixin marginTop-center{
+    margin-top: 20px;
+    text-align: center;
+}
+
+//box-shadow para el header y el footer
+@mixin boxShadow{
+    box-shadow: 0px 5px 10px 0px #2b3035;
+}
+
+//color de fondo y texto para le heder y el footer
+@mixin fondoGris-fuenteCrema{
+    background-color: #2b3035;
+    color: #d8d3ac;
+}
+
+//media querys
+
+@mixin mediaQueries{
+@media screen and (min-width: 600px) {
+
+        .service-container,
+        .products-container {
+            flex-direction: row;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .products-container .imagenes-siete {
+            display: block;
+            grid-column: span 2;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        .service-container{
+            flex-direction: row;
+        }
+        .products-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .products-container .imagenes-siete
+        {
+            display: block;
+            grid-column: span 3;
+        }
+    }
+}
+

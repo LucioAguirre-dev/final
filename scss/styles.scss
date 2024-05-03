@@ -1,0 +1,158 @@
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+
+
+*{
+    @include reset;
+}
+
+a:hover {
+    text-decoration: overline;
+}
+
+section{
+    margin-top: 20px;
+    padding: 40px;
+    text-align: justify;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #d8d3ac;
+}
+
+h2{
+    @include marginTop-center;
+    font-size: 1.3rem;
+    color: $color-impact;
+    margin-bottom: 20px;
+    em{
+        font-weight: bold;
+    }
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: $color-gris;
+    text-shadow: 1px 1px 2px #000;
+}
+
+h4{
+font-size: 1rem;
+color: $color-gris;
+text-shadow: 1px 1px 2px #000;
+}
+    
+p{
+    font-size: 0.95rem;;
+}
+
+header {
+    @extend %fondoGris-fuenteCrema-extend;
+    nav{
+        @extend %boxShadow-extend;
+    }
+}
+
+
+footer {
+    @extend %fondoGris-fuenteCrema-extend;
+    @extend %boxShadow-extend;
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+nav {
+    background-color: #0C282B;
+    ul{
+        @extend %flex-extend;
+        list-style-type: none;
+        padding: 3px;
+    }
+    li{
+        margin-right: 5px;
+        padding: 3px;
+    }
+    a{
+        text-decoration: none;
+        color: #FFFFFF;
+        padding: 10px 15px;
+        display: block;
+    }
+}
+
+//clases
+.centered-logo-text {
+    @extend %fondoGris-fuenteCrema-extend;
+    @extend %flex-extend;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    img{
+        width: 200px;
+    }
+}
+
+.articulo-main{
+    text-align: center;
+    h3, div {
+        @extend %flex-extend;
+    }
+    
+}
+
+.align-center{
+    @extend %flex-extend;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.service-container,
+.products-container {
+    @include flexContainers;
+}
+
+.mainTitle{
+    text-align: center;
+    color: #C70000;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.product {
+    border: 1px solid rgb(84, 84, 84);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.border{
+    border: 2px solid ;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tamano-productos {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+//Llamo media queries
+@include mediaQueries

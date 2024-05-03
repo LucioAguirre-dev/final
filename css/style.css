@@ -1,0 +1,171 @@
+footer, header nav {
+  box-shadow: 0px 5px 10px 0px #2b3035;
+}
+
+.centered-logo-text, footer, header {
+  background-color: #2b3035;
+  color: #d8d3ac;
+}
+
+.align-center, .articulo-main h3, .articulo-main div, .centered-logo-text, nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: overline;
+}
+
+section {
+  margin-top: 20px;
+  padding: 40px;
+  text-align: justify;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #d8d3ac;
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #9E5327;
+  margin-bottom: 20px;
+}
+h2 em {
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2b3035;
+  text-shadow: 1px 1px 2px #000;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #2b3035;
+  text-shadow: 1px 1px 2px #000;
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: right;
+}
+
+nav {
+  background-color: #0C282B;
+}
+nav ul {
+  list-style-type: none;
+  padding: 3px;
+}
+nav li {
+  margin-right: 5px;
+  padding: 3px;
+}
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  display: block;
+}
+
+.centered-logo-text {
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.centered-logo-text img {
+  width: 200px;
+}
+
+.articulo-main {
+  text-align: center;
+}
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.service-container,
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.mainTitle {
+  text-align: center;
+  color: #C70000;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.product {
+  border: 1px solid rgb(84, 84, 84);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.border {
+  border: 2px solid;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tamano-productos {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .service-container,
+  .products-container {
+    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products-container .imagenes-siete {
+    display: block;
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .service-container {
+    flex-direction: row;
+  }
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .products-container .imagenes-siete {
+    display: block;
+    grid-column: span 3;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
